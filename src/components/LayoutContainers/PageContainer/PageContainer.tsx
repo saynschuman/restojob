@@ -9,4 +9,3 @@ export const PageContainer: React.SFC = (props) => {
 export const ColumnsPageContainer: React.SFC = (props) => {
     return <div className={classNames(CSS.container, CSS.columnsLayout)}>{props.children}</div>;
 };
-
