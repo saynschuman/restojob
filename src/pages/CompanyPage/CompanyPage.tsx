@@ -14,7 +14,11 @@ import { Vacancy } from '../../types';
 import { companyMock } from '../../mocks';
 const CSS = require('./CompanyPage.styl');
 const logoWRF = require('../../assets/images/logoWRF.png');
+import { Gallery } from '../../components/common/Gallery/Gallery';
 import { CompanyImage } from '../../components/common/CompanyImage/CompanyImage';
+import { MapBlock } from '../../components/common/MapBlock/MapBlock';
+import { vacancyMock } from '../../mocks';
+import { AddressesList } from '../../components/common/AddressesList/AddressesList';
 
 export const catalogFilters = [
     { value: 'kitchen', title: 'Кухня' },
@@ -29,7 +33,10 @@ interface CompanyPageProps {
         href: string,
     };
     imgsrc?: string;
+    company: string[];
     vacancies: Vacancy[];
+    vacancy: Vacancy;
+
 }
 
 export class CompanyPage extends React.PureComponent<CompanyPageProps> {
@@ -39,13 +46,18 @@ export class CompanyPage extends React.PureComponent<CompanyPageProps> {
     };
 
     render() {
+        const hasAdresses = this.props.vacancy.addressesList && this.props.vacancy.addressesList.length;
+        const vacancyCoords =
+            hasAdresses
+                ? this.props.vacancy.addressesList
+                    .filter(address => !!address.coord)
+                    .map(address => address.coord)
+                : null;
         return (
             <ColumnsPageContainer>
                 <AsideLeftContainer>
                     {/*<div className={CSS.asideLeftContent}>*/}
-                    {this.props.banner && (
-                        <CompanyImage img={this.props.imgsrc} />
-                    )}
+                    {this.props.banner && <CompanyImage img={this.props.imgsrc} />}
                     {/*<CitySelect*/}
                     {/*currentCity={this.state.currentCity}*/}
                     {/*cities={[*/}
@@ -66,12 +78,41 @@ export class CompanyPage extends React.PureComponent<CompanyPageProps> {
                     {/*</div>*/}
                 </AsideLeftContainer>
                 <MainContainer>
+                    <header className={CSS.headerRec}>
+                        <h1>Британские кондитерские</h1>
+                        <div>Москва</div>
+                        <div className="recommended"></div>
+                    </header>
+                    {/*<section>*/}
+                        {/*<p>Дата открытия: <span>2016 год</span></p>*/}
+                        {/*<p>*/}
+                            {/*Британские пекарни» твердо решили захватить мир! Ну или, как минимум,*/}
+                            {/*Санкт-Петербург - точно)*/}
+                        {/*</p>*/}
+                        {/*<p>*/}
+                            {/*Мы - успешная компания с более чем 20-летней историей. Несмотря на это,*/}
+                            {/*продолжаем развиваться и не стоим на месте. В нашей команде работают*/}
+                            {/*профессионалы, неравнодушные к своему делу, готовые делиться*/}
+                            {/*накопленными знаниями и опытом, создавая новые традиции. Не хватает*/}
+                            {/*только ТЕБЯ!*/}
+                        {/*</p>*/}
+                    {/*</section>*/}
+                    {!!this.props.company.photoSet.length && <section className={CSS.photos}>
+                        <Gallery images={this.props.fancyImages} />
+                    </section>}
                     <section className={CSS.catalogSection}>
                         <h1 className={CSS.catalogSectionTitle}>Вакансии в Бретанские Пекарни</h1>
                         {this.props.vacancies.map((vacancy, index) => (
                             <CatalogItemVacancy vacancy={vacancy} key={index} />
                         ))}
                     </section>
+
+                    {hasAdresses && <section className={CSS.map}>
+                        <h2 className={CSS.mapTitle}>Адреса</h2>
+                        <AddressesList addresses={this.props.vacancy.addressesList}/>
+                        {vacancyCoords && <MapBlock coords={vacancyCoords} />}
+                    </section>}
+
                 </MainContainer>
                 <AsideRightContainer>
                     {this.props.banner && (

@@ -5,6 +5,8 @@ import {
     vacancyMockActive,
     vacancyMockHot,
     vacancyMockRecommended,
+    companyMock,
+    fancyImages,
 } from '../../mocks';
 
 export class CompanyPageWrapper extends React.PureComponent {
@@ -17,6 +19,9 @@ export class CompanyPageWrapper extends React.PureComponent {
                 }}
                 imgsrc={'http://via.placeholder.com/220x220'}
                 vacancies={[vacancyMock, vacancyMockHot, vacancyMockRecommended, vacancyMockActive]}
+                company={companyMock}
+                vacancy={vacancyMockRecommended}
+                fancyImages={fancyImages}
             />
         );
     }

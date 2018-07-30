@@ -23,6 +23,7 @@ interface VacancyPageProps {
     vacancy: Vacancy;
     banner?: Banner;
     company: Company;
+    photoSet: string[];
 }
 
 interface VacancyAddress {
@@ -72,6 +73,7 @@ export class VacancyPage extends React.PureComponent<VacancyPageProps> {
                 <MainContainer>
                     <header className={classNames(CSS.mainHeader, { [CSS.mainHeaderHot]: this.props.vacancy.isHot })}>
                         <h1 className={CSS.vacancyTitle}>{this.props.vacancy.title}</h1>
+
                         <div className={CSS.salary}>{this.props.vacancy.salaryText}</div>
 
                         {this.props.vacancy.isHot && <div className={classNames(CSS.headerSpecial, CSS.headerSpecialHot)}>

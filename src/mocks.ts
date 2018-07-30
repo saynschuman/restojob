@@ -113,8 +113,23 @@ export const companyMock: Company = {
     city: cityMock,
     textDescription: '',
     photoSet: [slide1, slide2, slide3, slide4, slide5],
-    vacancyPublished: [vacancyMockBarista, vacancyMock, vacancyMockLong, vacancyMockHot, vacancyMockRecommended, vacancyMock],
+    vacancyPublished: [
+        vacancyMockBarista,
+        vacancyMock,
+        vacancyMockLong,
+        vacancyMockHot,
+        vacancyMockRecommended,
+        vacancyMock,
+    ],
 };
+
+export const fancyImages = [
+    'http://via.placeholder.com/800x600',
+    'http://via.placeholder.com/800x600',
+    'http://via.placeholder.com/800x600',
+    'http://via.placeholder.com/800x600',
+    'http://via.placeholder.com/800x600',
+];
 
 export const employeeMock: Employee = {
     name: 'Рустам',
@@ -155,12 +170,7 @@ export const categoryMock: Category[] = [
     {
         title: 'Кухня',
         image: categoryKitchen,
-        specializations: [
-            'Бренд-шеф',
-            'Шеф-повар',
-            'Су-шеф',
-            'Зав. производством',
-        ],
+        specializations: ['Бренд-шеф', 'Шеф-повар', 'Су-шеф', 'Зав. производством'],
     },
     {
         title: 'Управление',
@@ -177,19 +187,11 @@ export const categoryMock: Category[] = [
     {
         title: 'Другие специалисты',
         image: categoryOther,
-        specializations: [
-            'Бренд-шеф',
-            'Шеф-повар',
-        ],
+        specializations: ['Бренд-шеф', 'Шеф-повар'],
     },
     {
         title: 'Без спец подготовки',
         image: categoryWithoutTraining,
-        specializations: [
-            'Бренд-шеф',
-            'Шеф-повар',
-            'Шеф-повар',
-            'Шеф-повар',
-        ],
+        specializations: ['Бренд-шеф', 'Шеф-повар', 'Шеф-повар', 'Шеф-повар'],
     },
 ];
