@@ -1,0 +1,61 @@
+.newAddressForm
+    padding: 10px 0 0
+
+.newAddressFormTitle
+    color: $color-text
+    font-size: 13px
+    margin: 0 0 12px
+
+.newAddressFormInput
+    width: 500px
+    margin: 0 0 17px
+
+    &.invalid
+        border-color: #ff0000
+
+.newAddressFormMapContainer
+    display: flex
+    flex-direction: row
+    align-items: flex-start
+    justify-content: space-between
+    flex-wrap: nowrap
+    margin-bottom: 27px
+
+.map
+    flex-grow: 1
+    width: 500px
+    margin-right: 33px
+
+    @media (max-width: 1150px)
+        width: 400px
+
+.mapTextBlock
+    width: calc(100% - 533px)
+    line-height: 1.2
+
+    @media (max-width: 1150px)
+        width: calc(100% - 433px)
+
+.mapTextTitle
+    text-transform: uppercase
+    font-weight: bold
+    font-size: 13px
+
+.mapText
+    font-size: 11px
+    margin-bottom: 30px
+    line-height: 1.4
+
+    a
+        color: $color-link
+        text-decoration: none
+        font-weight: bold
+
+.bottomButton
+    display: inline-block
+    vertical-align: top
+    width: 144px
+
+    & + &
+        margin-left: 20px
+

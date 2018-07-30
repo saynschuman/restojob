@@ -1,0 +1,30 @@
+.container
+    padding: 0
+    margin: 0
+    display: flex
+    flex-direction: column
+    align-items: stretch
+    justify-content: stretch
+    flex-wrap: wrap
+
+.filter
+    width: 100%
+    padding: 8px 10px
+    font-size: 13px
+    border-radius: 3px
+    color: #4F4F4F
+    text-align: left
+    user-select: none
+    margin: 0 0 5px
+    word-break: break-word
+    cursor: pointer
+
+    &:hover
+        background-color: #EEEEEE
+
+    &.active
+        background-color: $color-link
+        color: #fff
+
+.checkbox
+    display: none

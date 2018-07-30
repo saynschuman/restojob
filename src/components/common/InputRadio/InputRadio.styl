@@ -1,0 +1,44 @@
+.container
+    position: relative
+    display: block
+    cursor: pointer
+    user-select: none
+    padding-left: 24px
+
+.input
+    display: none
+
+.mark
+    position: absolute
+    left: 0
+    top: 4px
+    display: inline-block
+    vertical-align: middle
+    width: 14px
+    height: 14px
+    border: 1px solid #C4CCCF
+    margin-right: 10px
+    border-radius: 50%
+
+    &::after
+        display: block
+        content: ''
+        position: absolute
+        top: 50%
+        left: 50%
+        width: calc(100% - 2px)
+        height: calc(100% - 2px)
+        transform: translate3d(-50%, -50%, 0)
+        opacity: 0
+        background-color: $color-link
+        border-radius: 50%
+
+    .input:checked + &::after
+        opacity: 1
+
+.title
+    display: inline-block
+    vertical-align: middle
+    font-weight: 300
+    font-size: 15px
+    color: $color-text

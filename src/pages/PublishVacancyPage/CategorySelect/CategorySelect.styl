@@ -1,0 +1,51 @@
+.categorylist
+    margin-bottom: 45px
+    display: flex
+    flex-direction: row
+    align-items: center
+    justify-content: flex-start
+    padding: 15px 0 0
+
+.categoryTab
+    position: relative
+    border: 3px solid transparent
+    border-radius: 8px
+    width: 17%
+    height: 98px
+    display: flex
+    flex-direction: row
+    align-items: center
+    justify-content: flex-start
+    overflow: hidden
+    cursor: pointer
+    background: no-repeat center / cover
+    background-clip: content-box
+
+    & + &
+        margin-left: 15px
+
+    &.active
+        border-color: #2f80ed
+
+.categoryTitle
+    position: relative
+    color: #fff
+    font-size: 13px
+    font-weight: bold
+    text-transform: uppercase
+    margin-left: 10px
+
+.checkbox
+    display: inline-block
+    vertical-align: top
+    width: 33%
+    padding-right: 20px
+    margin-bottom: 20px
+
+.currentCategoryTitle
+    font-size: 13px
+    margin: 0 0 27px
+
+.currentCategoryWord
+    text-transform: uppercase
+    margin-left: 5px

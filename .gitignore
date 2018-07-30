@@ -1,0 +1,9 @@
+# IDEA
+.idea
+# Node
+node_modules
+dist
+package-lock.json
+.gtm
+.out
+build

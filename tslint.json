@@ -1,0 +1,16 @@
+{
+    "extends": ["tslint-config-airbnb", "tslint-react"],
+
+    "rules": {
+        "max-line-length": [false],
+        "ter-indent": [true, 4, {"SwitchCase": 1}],
+        "jsx-no-multiline-js": [false],
+        "jsx-no-lambda": [false],
+        "align": [true, "statements"],
+        "import-name": [false],
+
+
+        // This rule is here for now because of https://github.com/palantir/tslint-react/issues/120
+        "variable-name": [true, "ban-keywords", "check-format", "allow-pascal-case"]
+    }
+}

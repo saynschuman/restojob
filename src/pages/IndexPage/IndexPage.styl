@@ -1,0 +1,208 @@
+.topBlock
+    position: relative
+    display: flex
+    flex-direction: row
+    align-items: stretch
+    justify-content: space-between
+    flex-grow: 1
+    padding: 0 0 40px
+
+    &::after
+        content: ''
+        position: absolute
+        bottom: 0
+        left: 0
+        width: 100%
+        height: 10px
+        background: #F2F2F2
+        border-top: 1px solid #E0E0E0
+
+.topBlockRightColumn
+    width: 392px
+    flex-grow: 1
+    padding-left: 3%
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+
+    .stats
+        display: flex
+        flex-direction: row
+        align-items: flex-start
+        justify-content: space-between
+        margin: 0
+        padding: 12px 0 22px
+        list-style: none
+        border-bottom: 1px solid #E0E0E0
+
+        .statsItem
+            margin: 0 15px 0
+            text-align: left
+            color: $color-text
+            font-size: 11px
+
+        .statsNumber
+            display: block
+            color: $color-text
+            font-size: 30px
+            font-weight: bold
+            margin-bottom: 0
+            white-space: nowrap
+
+            @media (max-width: 1150px)
+                font-size: 20px
+
+    .mobileAppBlock
+        img
+            height: auto
+
+
+.centerBlock
+    display: flex
+    flex-direction: row
+    align-items: flex-start
+    padding: 40px 0 10px
+
+.bestCompanies
+    width: 65%
+    padding: 0 12px 0 0
+
+    .companyList
+        margin: 35px 0 0
+        display: flex
+        flex-direction: row
+        align-items: flex-start
+        justify-content: space-between
+        flex-wrap: wrap
+
+    .companyItem
+        width: calc(50% - 12px)
+        margin: 0 0 70px
+
+.sectionTitle
+    color: $color-text
+    font-size: 13px
+    font-weight: bold
+    margin: 0
+    text-transform: uppercase
+
+.hotVacancies
+    width: 35%
+    padding: 0 0 0 2.6%
+    border-left: 1px solid #F2F2F2
+
+.hotVacanciesItem
+    margin: 0
+    padding: 0
+
+    &:first-of-type
+        margin-top: 16px
+
+    &::after
+        content: none!important
+
+    & + &
+        margin-top: 8px
+
+.hotVacanciesMore
+    display: block
+    margin-top: 6px
+    color: $color-link
+    font-size: 11px
+    text-decoration: none
+
+    &:hover
+        text-decoration: underline
+
+
+.employees
+    position: relative
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    align-items: flex-start
+    padding: 60px 0 72px
+
+    &::after
+        content: ''
+        position: absolute
+        bottom: 0
+        left: 0
+        width: 100%
+        height: 10px
+        background: #F2F2F2
+        border-top: 1px solid #E0E0E0
+
+    .employeesAbout
+        display: block
+        width: 22%
+
+    .employeesTitle
+        font-weight: bold
+        color: #000000
+        font-size: 36px
+        margin: 0 0 17px
+        text-transform: uppercase
+        line-height: 1.1
+
+        @media (max-width: 1200px)
+            font-size: 25px
+
+    .employeesTitleSmall
+        font-size: 13px
+        font-weight: 400
+        margin: 0 0 30px
+        text-transform: uppercase
+        line-height: 18px
+
+        span
+            background: #F2C94C
+            line-height: 1.35
+            padding: 5px
+            box-decoration-break: clone;
+            -webkit-box-decoration-break: clone;
+
+    .employeesText
+        color: $color-text
+        margin: 0 0 25px
+        font-size: 13px
+        line-height: 1.4
+
+    .employeesCatalogButton
+        position: relative
+
+    .employeesCatalogLink
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+
+.employeesCategory
+    width: 26%
+    padding: 0 20px 0 40px
+    border-left: 1px solid transparent
+
+    &:first-child
+        padding-left: 44px
+
+    & + &
+        border-color: #F2F2F2
+
+.employeesCategoryTitle
+    color: $color-text
+    font-size: 13px
+    font-weight: bold
+    margin: 0 0 30px
+    text-transform: uppercase
+
+    @media (max-width: 1200px)
+        min-height: 30px
+
+.employee
+
+    & + &
+        margin-top: 45px
+
+.bottomBlock
+    padding-top: 46px

@@ -1,0 +1,54 @@
+.nav
+    position: relative
+    width: 65%
+    padding: 70px 50px 32px
+    text-align: center
+    color: #fff
+    border-radius: 5px
+    overflow: hidden
+    background: no-repeat center / cover url('./i/bg.jpg')
+
+    & > *
+        position: relative
+
+    &::before
+        content: ''
+        position: absolute
+        left: 0
+        top: 0
+        width: 100%
+        height: 100%
+        background: rgba(0, 0, 0, 0.3)
+        border-radius: 5px
+        overflow: hidden
+
+.title
+    margin: 0 0 41px
+    color: #fff
+    font-weight: lighter
+    font-size: 24px
+    text-align: center
+
+.list
+    margin: 0 0 78px
+    text-align: center
+    white-space: nowrap
+
+.link
+    display: inline-block
+    vertical-align: top
+    margin: 0 4% 0
+    font-size: 18px
+    font-weight: bold
+    text-decoration: none
+    color: #fff
+
+    &:hover
+        text-decoration: underline
+
+.bottomInfo
+    font-size: 13px
+
+    a
+        color: #fff
+        text-decoration: underline

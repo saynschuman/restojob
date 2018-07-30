@@ -1,0 +1,125 @@
+.button
+    margin-left: 31px
+    position: relative
+
+    & + &
+        margin-left: 14px
+
+    a
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+
+.userMenu
+    position: relative
+    display: flex
+    flex-direction: row
+    align-items: center
+    margin-left: 27px
+    min-height: 40px
+
+    &::before
+        content: ''
+        position: absolute
+        top: 0
+        left: 0
+        height: 40px
+        width: 1px
+        background: #E0E0E0
+
+.iconLink
+    display: block
+    position: relative
+    background: no-repeat center / contain;
+    width: 25px
+    height: 25px
+    margin-left: 25px
+
+    &.iconLinkApplications
+        background-image: url("./i/iconPeople.svg")
+        width: 33px
+        &:hover
+            background-image: url("./i/iconPeopleBlue.svg")
+
+    &.iconLinkInvitations
+        background-image: url("./i/iconBag.svg")
+        &:hover
+            background-image: url("./i/iconBagBlue.svg")
+
+    &.iconLinkAvatar
+        background-image: url("./i/iconPlus.svg")
+        background-size: 23px 23px
+        width: auto
+        height: auto
+        min-width: 23px
+        min-height: 23px
+        &:hover
+            background-image: url("./i/iconPlusBlue.svg")
+
+    &.iconLinkMenu
+        background-image: url("./i/iconMenu.svg")
+        &:hover
+            background-image: url("./i/iconMenuBlue.svg")
+
+    &.iconLinkMessages
+        background-image: url("./i/iconMessage.svg")
+        &:hover
+            background-image: url("./i/iconMessageBlue.svg")
+
+    &.iconLinkFavorites
+        background-image: url("./i/iconStar.svg")
+        &:hover
+            background-image: url("./i/iconStarBlue.svg")
+
+    .number
+        position: absolute
+        bottom: 50%
+        left: 50%
+        display: flex
+        flex-direction: row
+        align-items: center
+        justify-content: center
+        width: 22px
+        height: 22px
+        border: 3px solid #fff
+        background: #F43232
+        border-radius: 50%
+        color: #fff
+        font-size: 11px
+
+        &.numberBig
+            width: 27px
+            height: 27px
+
+        &.numberExtremelyBig
+            width: 30px
+            height: 30px
+
+.avatarContainer
+    display: block
+    width: 35px
+    height: 35px
+    border-radius: 50%
+    overflow: hidden
+
+.avatar
+    display: block
+    width: 100%
+    min-height: 100%
+
+.balance
+    margin-left: 25px
+
+.balanceTitle
+    display: block
+    font-weight: 500px
+    font-size: 10px
+    text-transform: uppercase
+    color: #333333
+
+.balanceCount
+    display: block
+    font-size: 20px
+    color: #333333

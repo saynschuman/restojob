@@ -1,0 +1,53 @@
+.container
+    position: relative
+    display: inline-block
+    vertical-align: top
+    width: calc(25% - 11px)
+    min-height: 300px
+    border: 1px solid #27AE60
+
+    & + &
+        margin-left: 14px
+
+    &.notAvailable
+        border-color #EB5757
+
+
+.titleContainer
+    display: block
+    width: 210px
+    min-height: 100px
+    margin: 0 auto
+    border-bottom: 2px solid #E9EDEE
+    padding: 22px 7px 10px 78px
+    background: no-repeat 14px center / auto 50px
+
+.title
+    font-size: 13px
+    margin: 0 0 5px
+    line-height: 110%
+
+.price
+    font-weight: 300
+    font-size: 18px
+
+.description
+    font-size: 13px
+    padding: 15px 13px 0
+    color: #4F4F4F
+    line-height: 1.4
+
+    a
+        color: $color-link
+        text-decoration: none
+
+.notEnoughMoney
+    position: absolute
+    bottom: 10px
+    width: 100%
+    text-align: center
+    background: #fff
+    font-size: 11px
+    text-transform: uppercase
+    color: #EB5757
+    font-weight: 500

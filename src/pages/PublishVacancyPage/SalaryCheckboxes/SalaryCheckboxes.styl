@@ -1,0 +1,44 @@
+.container
+    position: relative
+    display: inline-block
+    border: 1px solid #C4CCCF
+    border-radius: 5px
+    padding: 10px 5px 12px 23px
+    font-size: 12px
+    min-width: 100px
+    cursor: pointer
+    text-align: center
+    user-select: none
+
+    &.isActive
+        border-color: #2D9CDB
+        background-color: #2D9CDB
+        color: #fff
+
+.tipsCheckbox
+    margin: 0 3px 0 14px
+
+    &::before
+        position: absolute
+        top: 9px
+        left: 14px
+        width: 17px
+        height: 17px
+        display: inline-block
+        vertical-align: middle
+        content: ''
+        background: no-repeat center / contain url('./i/iconTips.svg')
+
+    &.isActive::before
+        background-image: url('./i/iconTipsWhite.svg')
+
+.percentCheckbox
+    &::before
+        position: absolute
+        top: 9px
+        left: 13px
+        display: inline-block
+        vertical-align: middle
+        content: '%'
+        font-size: 16px
+        margin-right: 5px

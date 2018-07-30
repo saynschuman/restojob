@@ -1,0 +1,40 @@
+*
+*::after,
+*::before
+    box-sizing: border-box
+
+body
+    background #E4E4E4
+    font-family 'Roboto', sans-serif
+    margin: 0
+    color: $color-text
+
+input[type='text']
+input[type='tel']
+    border: 1px solid #C4CCCF
+    border-radius: 5px
+    height: 35px
+    padding: 9px 12px 12px
+    font-size: 15px
+
+    &:focus
+        outline: none
+        border-color: $color-link
+
+    &::-webkit-input-placeholder
+    &::-moz-placeholder
+    &:-moz-placeholder
+    &:-ms-input-placeholder
+        color #828282
+        font-weight: 300
+
+textarea
+    border: 1px solid #C4CCCF
+    border-radius: 5px
+    padding: 9px 12px 12px
+    font-size: 15px
+    margin-bottom: 15px
+
+    &:focus
+        outline: none
+        border-color: $color-link

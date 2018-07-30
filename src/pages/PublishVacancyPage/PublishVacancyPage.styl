@@ -1,0 +1,185 @@
+.form
+    padding: 40px 0 0
+    margin: 0
+    list-style: none
+    counter-reset: item
+
+.fieldset
+    padding: 0 0 0 108px
+    margin: 0 0 73px
+    position: relative
+    border: none
+    outline: none
+    counter-increment: item
+
+    &::before
+        position: absolute
+        top: -10px
+        left: 25px
+        content: counter(item)
+        color: #D5D9DA
+        font-size: 72px
+        font-weight: 500
+        line-height: 1
+
+    &.invalid
+        &::before
+            color: #EB5757
+
+        .smallTitle
+            color: #EB5757
+
+.smallTitle
+    display: block
+    font-weight: bold
+    font-size: 13px
+    color: $color-text
+    text-transform: uppercase
+    margin: 0 0 5px
+
+.placesList
+    padding: 20px 0 0
+
+.addressesList
+    padding: 15px 0 0
+
+.addressCheckbox
+    display: inline-block
+    vertical-align: top
+    width: 33%
+    padding-right: 20px
+    margin-bottom: 28px
+
+.addAddressButton
+    color: #2E99EB
+    font-size: 11px
+    cursor: pointer
+    margin: -18px 0 0 23px
+
+.workExperienceList
+    padding: 15px 0 0
+
+.workExperienceInput
+    display: inline-block
+    vertical-align: top
+    width: 33%
+    padding-right: 20px
+    margin-bottom: 16px
+
+.descriptionTextArea
+    resize: none
+    width: 588px
+    height: 300px
+    margin: 0 0 42px
+
+.descriptionSmallTitle
+    font-size: 13px
+    margin: 0 0 15px
+
+input.vacancyTitleInput
+    width: 500px!important
+    margin-bottom: 31px
+
+.salaryContainer
+    margin-bottom: 30px
+
+.salaryUnit
+    margin-right: 12px
+
+input.salaryInput
+    display: inline-block
+    vertical-align: middle
+    width: 80px
+    margin-bottom: 0
+    margin-right: 10px
+
+    & + &
+        margin-left: 10px
+
+
+.scheduleInput
+    width: 35px
+    margin-right: 12px
+
+    & + &
+        margin-left: 12px
+
+.otherRequirementsText
+    color: #828282
+    font-size: 13px
+    font-weight: 300
+    margin-bottom: 6px
+
+.otherRequirementsBlock
+    margin-bottom: 57px
+
+.otherRequirementsSmallTitle
+    font-size: 13px
+    margin: 0 0 16px
+
+.otherRequirementsToggle
+    color: $color-link
+    font-size: 13px
+    cursor: pointer
+    margin: 0 0 35px
+
+.reqRadio
+    display: block
+    margin-bottom: 17px
+
+.reqCheckbox
+    display: inline-block
+    margin-bottom: 24px
+    width: 33%
+    margin-right: 20px
+
+.contactInputsContainer
+    margin: 0
+    padding: 23px 0 0
+
+.contactInput
+    display: inline-block
+    vertical-align: top
+    width: 315px
+    margin-right: 30px
+    margin-bottom: 22px
+
+.contactInputLabel
+    display: block
+    font-size: 13px
+    margin-bottom: 14px
+
+.contactInputName
+    width: 100%
+
+.contactInputPhone
+    width: 154px
+
+.contactCheckbox
+    margin-bottom: 10px
+
+.vacancyTypeSelect
+    position: relative
+    padding-top: 60px
+    margin-bottom: 54px
+    border-top: 3px solid #E9EDEE
+
+.vacancyTypesContainer
+    padding: 15px 0 0
+    margin: 0
+
+.submitButton
+    display: block
+    width: 220px
+    margin: 0 auto
+
+.notEnoughMoney
+    position: absolute
+    right: 0
+    top: 60px
+    font-size: 11px
+
+    a
+        color: $color-link
+        text-decoration: none
+

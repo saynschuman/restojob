@@ -1,0 +1,152 @@
+.vacancyPageContent
+    display: flex
+    flex-direction: row
+    justify-content: flex-start
+    align-items: flex-start
+
+.companyLink
+    display: block
+    text-decoration: none
+
+.companyLogo
+    width: 100%
+    margin-bottom: 8px
+
+.companyTitle
+    color: $color-link
+    font-size: 18px
+    font-weight: bold
+    margin-bottom: 7px
+
+.companyVacancies
+    font-size: 15px
+    color: $color-link
+    margin-bottom: 8px
+
+.companyCity
+    font-size: 15px
+    font-weight: bold
+    color: #333333
+    margin-bottom: 30px
+
+.applyButton
+    width: 100%
+    margin-bottom: 13px
+
+.showPhoneButton
+    width: 100%
+    margin-bottom: 20px
+
+.dateAndNumber
+    font-size: 13px
+    font-weight: 300
+    color: $color-text
+
+.mainHeader
+    position: relative
+    padding-bottom: 15px
+    padding-right: 200px
+    border-bottom: 3px solid #E9EDEE
+    margin-bottom: 30px
+
+    &.mainHeaderHot
+        border-color: #FFC107
+
+.headerSpecial
+    width: 170px
+    position: absolute
+    top: calc(50% - 7px)
+    right: 0
+    transform: translate3d(0, -50%, 0)
+    padding-left: 50px
+    font-size: 12px
+    color: $color-text
+
+    &::before
+        content: ''
+        position: absolute
+        top: 50%
+        left: 0
+        transform: translate3d(0, -50%, 0)
+        width: 40px
+        height: 40px
+        background: no-repeat center / contain
+
+    &.headerSpecialHot::before
+        background-image: url('./i/iconHot.svg')
+    &.headerSpecialActive::before
+        background-image: url('./i/iconActive.svg')
+    &.headerSpecialRecommended::before
+        background-image: url('./i/iconRecommended.svg')
+
+.vacancyTitle
+h1.vacancyTitle
+    display: block
+    font-size: 24px
+    font-weight: bold
+    color: $color-text
+    margin: 0 0 3px
+
+.salary
+    display: block
+    font-size: 24px
+    font-weight: 300
+    color: $color-text
+
+.descriptionList
+    list-style: none
+    padding: 0
+    margin-bottom: 40px
+
+.descriptionItem
+    font-size: 15px
+    font-weight: 300
+    color: $color-text
+
+    & + &
+        margin-top: 5px
+
+.descriptionItemTitle
+    font-size: 15px
+    font-weight: 300
+    color: #828282
+    margin-right: 10px
+
+.about
+    margin-bottom: 100px
+
+    p
+        font-size: 15px
+        font-weight: 300
+        color: $color-text
+        line-height: 1.35;
+        margin: 0
+
+    p + p
+        margin: 22px 0 0
+
+.aboutTitle
+h2.aboutTitle
+    font-size: 13px
+    font-weight: bold
+    color: $color-text
+    margin: 0 0 22px
+    text-transform: uppercase
+
+.mapTitle
+h2.mapTitle
+    font-size: 13px
+    font-weight: bold
+    color: $color-text
+    margin: 0
+    text-transform: uppercase
+
+.photos
+    margin-bottom: 12px;
+    padding-bottom: 10px
+    border-bottom: 3px solid #E9EDEE
+
+.mobileAppBlock
+    border: 1px solid #EBEBEB
+    border-radius: 3px
+    padding: 20px 14px

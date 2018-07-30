@@ -1,0 +1,57 @@
+.select
+    position: relative
+    cursor: pointer
+    width: 160px
+    padding: 5px 11px
+    margin: 0 0 12px
+
+.option
+    cursor: pointer
+    padding: 5px
+    color: $color-text
+    background: #eaeaea
+
+    &:hover
+        background: #bcbcbc
+
+:global(.Select-control)
+    height: 20px
+
+:global(.Select-menu-outer)
+    position: absolute
+    top: 100%
+    left: 11px
+
+:global(.Select-value-label)
+    position: relative
+    color: $color-link
+    cursor: pointer
+    font-weight: bold
+
+    .select:hover &
+        text-decoration: underline
+
+    &::after
+        position: absolute;
+        bottom: 5px;
+        right: -15px;
+        content: '';
+        display: block;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 7px 4px 0 4px;
+        border-color: $color-link transparent transparent transparent;
+
+:global(.is-open .Select-value-label)
+    &::after
+        position: absolute
+        bottom: 5px;
+        right: -15px;
+        content: ''
+        display: block
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 0 4px 7px 4px;
+        border-color: transparent transparent $color-link transparent;

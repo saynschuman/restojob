@@ -1,0 +1,170 @@
+.item
+    position: relative
+    display: flex
+    flex-direction: row
+    align-items: stretch
+    justify-content: center
+    padding: 23px 13px 20px 0
+    background: #fff
+    min-height: 90px
+
+    &:last-of-type
+        margin-bottom: 10px
+
+    &:not(:last-child)::after
+        content: ''
+        background-color: #F2F2F2
+        position: absolute
+        bottom: 0
+        left: 0
+        width: 100%
+        height: 1px
+
+    .link
+        position: absolute
+        z-index: 1
+        left: 0
+        top: 0
+        width: 100%
+        height: 100%
+
+.itemLogoContainer
+    width: 60px
+    min-width: 60px
+    display: flex
+    justify-content: center
+    align-items: center
+    margin-right: 20px
+    overflow: hidden
+
+.itemLogo
+    max-width 100%
+
+.itemContent
+    flex-grow: 1
+    display: flex
+    flex-direction: column
+    justify-content: center
+    width: calc(100% - 225px)
+
+.vacancyHeader
+    padding-right: 50px
+    position: relative
+    display: block
+    margin-bottom: 10px
+
+    &::first-letter
+        text-transform: uppercase
+
+.vacancyTitle
+    font-size: 13px
+    font-weight: bold
+    color: $color-link
+    text-decoration: none
+
+    &:hover
+        text-decoration: underline
+
+.date
+    display: inline
+    color: #bdbdbd
+    font-size: 13px
+    margin-left: 10px
+    font-weight: 400
+
+.salary
+    display: block
+    margin-bottom: 5px
+
+.salaryAmount
+    display: inline-block
+    vertical-align: middle
+    font-size: 20px
+    color: $color-text
+    font-weight: 300
+
+.bottomInfo
+    display: block
+    ellipsis()
+
+.companyTitle
+    display: inline-block
+    vertical-align: middle
+    font-size: 12px
+    color: $color-link
+    margin-right: 8px
+    text-decoration: none
+
+    &:hover
+        text-decoration: underline
+
+.addresses
+    position: relative
+    display: inline-block
+    vertical-align: middle
+    font-size: 12px
+    color: #BDBDBD
+    padding-left: 22px
+
+.metroCircle
+    position: absolute
+    left: 0
+    display: flex
+    align-items: center
+    justify-content: center
+    content: 'М'
+    width: 15px
+    height: 15px
+    font-size: 9px
+    border-radius: 50%
+    color: #F2F2F2
+
+.isHot
+    position: absolute
+    right: 10px
+    top: 50%
+    display: block
+    transform: translateY(-50%)
+    width: 24px
+    height: 43px
+    background no-repeat center / contain url('./i/iconHot.png')
+
+.isActiveSearch
+    position: absolute
+    right: 10px
+    top: 50%
+    display: flex
+    flex-direction: row
+    align-items: center
+    justify-content: center
+    transform: translateY(-50%)
+    width: 125px
+    height: 32px
+    padding-left: 35px
+    background no-repeat left / 27px 27px url('./i/iconActive.svg')
+    font-size: 11px
+    color: #4f4f4f
+
+.itemRightContent
+    min-width: 125px
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+    justify-content: center
+
+.vacancyParam
+    display: block
+    white-space: nowrap
+
+.vacancyParamTitle
+    display: inline-block
+    vertical-align: middle
+    min-width: 66px
+    font-size: 13px
+    color: #bdbdbd
+
+.vacancyParamValue
+    display: inline-block
+    vertical-align: middle
+    font-size: 13px
+    color: $color-text
