@@ -95,6 +95,15 @@ export const vacancyMockLong: Vacancy = {
     title: 'Повар горячего цеха очень хорошая зарплата очень большие перспективы',
 };
 
+export const vacancyMockBarista: Vacancy = {
+    ...vacancyMock,
+    title: 'Бариста',
+    company: {
+        ...vacancyMock.company,
+        logo: require('./assets/images/mocks/60x60.png'),
+    },
+};
+
 export const companyMock: Company = {
     id: 1,
     brend: 'Пиворама',
@@ -104,7 +113,7 @@ export const companyMock: Company = {
     city: cityMock,
     textDescription: '',
     photoSet: [slide1, slide2, slide3, slide4, slide5],
-    vacancyPublished: [vacancyMock, vacancyMockLong, vacancyMockHot, vacancyMockRecommended, vacancyMock],
+    vacancyPublished: [vacancyMockBarista, vacancyMock, vacancyMockLong, vacancyMockHot, vacancyMockRecommended, vacancyMock],
 };
 
 export const employeeMock: Employee = {
