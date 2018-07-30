@@ -10,6 +10,7 @@ import { Footer } from './components/blocks/Footer/Footer';
 import { CatalogPageWrapper } from './pages/CatalogPage/CatalogPageWrapper';
 import { IndexPageWrapper } from './pages/IndexPage/IndexPageWrapper';
 import { PublishVacancyPageWrapper } from './pages/PublishVacancyPage/PublishVacancyPageWrapper';
+import { CompanyPageWrapper } from './pages/CompanyPage/CompanyPageWrapper';
 moment.locale('ru');
 
 require('./styles/initial.styl');
@@ -20,10 +21,10 @@ ReactDOM.render(
             <Route exact={true} path="/" component={IndexPageWrapper} />
             <Route path="/vacancy" component={VacancyPageWrapper} />
             <Route path="/catalog" component={CatalogPageWrapper} />
+            <Route path="/company" component={CompanyPageWrapper} />
             <Route path="/publishVacancy" component={PublishVacancyPageWrapper} />
             <Footer />
         </>
-    </Router>
-    ,
+    </Router>,
     document.getElementById('app'),
 );
