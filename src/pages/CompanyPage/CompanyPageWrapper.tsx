@@ -13,8 +13,9 @@ export class CompanyPageWrapper extends React.PureComponent {
             <CompanyPage
                 banner={{
                     href: '#',
-                    img: 'http://restojob.ru/media/banner/files1/iphonebaaner.jpg',
+                    img: 'http://via.placeholder.com/240x400',
                 }}
+                imgsrc={'http://via.placeholder.com/220x220'}
                 vacancies={[vacancyMock, vacancyMockHot, vacancyMockRecommended, vacancyMockActive]}
             />
         );
