@@ -14,7 +14,7 @@ import { Vacancy } from '../../types';
 import { companyMock } from '../../mocks';
 const CSS = require('./CompanyPage.styl');
 const logoWRF = require('../../assets/images/logoWRF.png');
-import { CompanyImage }from '../../components/common/CompanyImage/CompanyImage';
+import { CompanyImage } from '../../components/common/CompanyImage/CompanyImage';
 
 export const catalogFilters = [
     { value: 'kitchen', title: 'Кухня' },
@@ -43,48 +43,31 @@ export class CompanyPage extends React.PureComponent<CompanyPageProps> {
             <ColumnsPageContainer>
                 <AsideLeftContainer>
                     {/*<div className={CSS.asideLeftContent}>*/}
-                        {this.props.banner && (
-                            <CompanyImage img={this.props.imgsrc} />
-                        )}
-                        {/*<CitySelect*/}
-                            {/*currentCity={this.state.currentCity}*/}
-                            {/*cities={[*/}
-                                {/*{ value: 'msk', label: 'Москва' },*/}
-                                {/*{ value: 'spb', label: 'Санкт-Петербург' },*/}
-                                {/*{ value: 'sochi', label: 'Сочи' },*/}
-                                {/*{ value: 'kazan', label: 'Казань' },*/}
-                                {/*{ value: 'eburg', label: 'Екатеринбург' },*/}
-                                {/*{ value: 'rostov', label: 'Ростов' },*/}
-                            {/*]}*/}
-                            {/*onChange={city => this.setState({ currentCity: city.value })}*/}
-                        {/*/>*/}
-                        {/*<SelectFilters*/}
-                            {/*filters={catalogFilters}*/}
-                            {/*onChange={val => this.setState({ currentFilter: val })}*/}
-                            {/*value={this.state.currentFilter}*/}
-                        {/*/>*/}
+                    {this.props.banner && (
+                        <CompanyImage img={this.props.imgsrc} />
+                    )}
+                    {/*<CitySelect*/}
+                    {/*currentCity={this.state.currentCity}*/}
+                    {/*cities={[*/}
+                    {/*{ value: 'msk', label: 'Москва' },*/}
+                    {/*{ value: 'spb', label: 'Санкт-Петербург' },*/}
+                    {/*{ value: 'sochi', label: 'Сочи' },*/}
+                    {/*{ value: 'kazan', label: 'Казань' },*/}
+                    {/*{ value: 'eburg', label: 'Екатеринбург' },*/}
+                    {/*{ value: 'rostov', label: 'Ростов' },*/}
+                    {/*]}*/}
+                    {/*onChange={city => this.setState({ currentCity: city.value })}*/}
+                    {/*/>*/}
+                    {/*<SelectFilters*/}
+                    {/*filters={catalogFilters}*/}
+                    {/*onChange={val => this.setState({ currentFilter: val })}*/}
+                    {/*value={this.state.currentFilter}*/}
+                    {/*/>*/}
                     {/*</div>*/}
                 </AsideLeftContainer>
                 <MainContainer>
-                    <CompanyTeaser
-                        brendLogo={logoWRF}
-                        brendTitle={'White Rabbit Family'}
-                        text={`
-                            На работу лучше ходить с радостью. Талантливая команда, отличные условия работы,
-                            и профессиональный рост ждут новых сотрудников WRF
-                        `}
-                        href={'#'}
-                    />
-
                     <section className={CSS.catalogSection}>
-                        <h1 className={CSS.catalogSectionTitle}>Горячие вакансии</h1>
-                        {this.props.vacancies.map((vacancy, index) => (
-                            <CatalogItemVacancy vacancy={vacancy} key={index} />
-                        ))}
-                    </section>
-
-                    <section className={CSS.catalogSection}>
-                        <h1 className={CSS.catalogSectionTitle}>Остальные вакансии</h1>
+                        <h1 className={CSS.catalogSectionTitle}>Вакансии в Бретанские Пекарни</h1>
                         {this.props.vacancies.map((vacancy, index) => (
                             <CatalogItemVacancy vacancy={vacancy} key={index} />
                         ))}
