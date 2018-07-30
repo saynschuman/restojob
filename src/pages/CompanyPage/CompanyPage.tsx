@@ -14,6 +14,7 @@ import { Vacancy } from '../../types';
 import { companyMock } from '../../mocks';
 const CSS = require('./CompanyPage.styl');
 const logoWRF = require('../../assets/images/logoWRF.png');
+import { CompanyImage }from '../../components/common/CompanyImage/CompanyImage';
 
 export const catalogFilters = [
     { value: 'kitchen', title: 'Кухня' },
@@ -27,6 +28,7 @@ interface CompanyPageProps {
         img: string,
         href: string,
     };
+    imgsrc?: string;
     vacancies: Vacancy[];
 }
 
@@ -40,25 +42,28 @@ export class CompanyPage extends React.PureComponent<CompanyPageProps> {
         return (
             <ColumnsPageContainer>
                 <AsideLeftContainer>
-                    <div className={CSS.asideLeftContent}>
-                        <CitySelect
-                            currentCity={this.state.currentCity}
-                            cities={[
-                                { value: 'msk', label: 'Москва' },
-                                { value: 'spb', label: 'Санкт-Петербург' },
-                                { value: 'sochi', label: 'Сочи' },
-                                { value: 'kazan', label: 'Казань' },
-                                { value: 'eburg', label: 'Екатеринбург' },
-                                { value: 'rostov', label: 'Ростов' },
-                            ]}
-                            onChange={city => this.setState({ currentCity: city.value })}
-                        />
-                        <SelectFilters
-                            filters={catalogFilters}
-                            onChange={val => this.setState({ currentFilter: val })}
-                            value={this.state.currentFilter}
-                        />
-                    </div>
+                    {/*<div className={CSS.asideLeftContent}>*/}
+                        {this.props.banner && (
+                            <CompanyImage img={this.props.imgsrc} />
+                        )}
+                        {/*<CitySelect*/}
+                            {/*currentCity={this.state.currentCity}*/}
+                            {/*cities={[*/}
+                                {/*{ value: 'msk', label: 'Москва' },*/}
+                                {/*{ value: 'spb', label: 'Санкт-Петербург' },*/}
+                                {/*{ value: 'sochi', label: 'Сочи' },*/}
+                                {/*{ value: 'kazan', label: 'Казань' },*/}
+                                {/*{ value: 'eburg', label: 'Екатеринбург' },*/}
+                                {/*{ value: 'rostov', label: 'Ростов' },*/}
+                            {/*]}*/}
+                            {/*onChange={city => this.setState({ currentCity: city.value })}*/}
+                        {/*/>*/}
+                        {/*<SelectFilters*/}
+                            {/*filters={catalogFilters}*/}
+                            {/*onChange={val => this.setState({ currentFilter: val })}*/}
+                            {/*value={this.state.currentFilter}*/}
+                        {/*/>*/}
+                    {/*</div>*/}
                 </AsideLeftContainer>
                 <MainContainer>
                     <CompanyTeaser
