@@ -12,7 +12,7 @@ import { IndexPageWrapper } from './pages/IndexPage/IndexPageWrapper';
 import { PublishVacancyPageWrapper } from './pages/PublishVacancyPage/PublishVacancyPageWrapper';
 import { CompanyPageWrapper } from './pages/CompanyPage/CompanyPageWrapper';
 moment.locale('ru');
-//some changes
+// some changes
 
 require('./styles/initial.styl');
 ReactDOM.render(
